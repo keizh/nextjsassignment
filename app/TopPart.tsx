@@ -1,3 +1,5 @@
+"use client";
+
 import { CenterComponent } from "./CenterComponent";
 import Button from "./Button";
 

@@ -26,7 +26,9 @@ export function CenterComponent() {
     }
 
     const handleWindowResize = () => {
-      setIsLessThan640px(window.innerWidth < 640);
+      if (typeof window !== "undefined") {
+        setIsLessThan640px(window.innerWidth < 640);
+      }
     };
 
     window.addEventListener("resize", handleWindowResize);
