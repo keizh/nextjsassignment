@@ -18,25 +18,6 @@ import { topInfo } from "./Info";
 import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 
 export default function CenterComponent() {
-  // const [isLessThan640px, setIsLessThan640px] = useState(null);
-  // console.log(topInfo);
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setIsLessThan640px(window.innerWidth < 640);
-  //   }
-
-  //   const handleWindowResize = () => {
-  //     if (typeof window !== "undefined") {
-  //       setIsLessThan640px(window.innerWidth < 640);
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleWindowResize);
-
-  //   // Cleanup function to remove the event listener
-  //   return () => window.removeEventListener("resize", handleWindowResize);
-  // }, []);
-
   return (
     <>
       <div className=".swiper-button-next"></div>
