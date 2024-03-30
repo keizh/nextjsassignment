@@ -1,31 +1,19 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-const BottomPartCenterComponent = dynamic(
-  () => import("./BottomPartCenterComponent"),
-  {
-    ssr: false,
-  }
-);
+// import dynamic from "next/dynamic";
+// const BottomPartCenterComponent = dynamic(
+//   () => import("./BottomPartCenterComponent"),
+//   {
+//     ssr: false,
+//   }
+// );
+
+import BottomPartCenterComponent from "./BottomPartCenterComponent";
 
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export default function BottomPart() {
-  // const [windowsize, setWindowSize] = useState(null);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setWindowSize(window.innerWidth < 640);
-  //   }
-
-  //   const handleResize = () => {};
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   // Cleanup function to remove the event listener
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, [windowsize]);
   return (
     <div className="h-[918px] w-[315px] mx-auto sm:w-[620px] md:[760px] lg:w-[1100px] xl:w-[1240px] flex justify-center items-center dark:bg-[#1F1E2B] ">
       <div className="arrow w-[305px] sm:w-[600px]  md:w-[700px] lg:w-[1020px] xl:w-[1085.75px] h-[820px]  flex flex-col justify-between items-center relative ">

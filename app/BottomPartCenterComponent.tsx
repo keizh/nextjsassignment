@@ -20,22 +20,22 @@ import "swiper/css/navigation";
 import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 
 function BottomPartCenterComponent() {
-  const [isLessThan640px, setIsLessThan640px] = useState(null);
+  // const [isLessThan640px, setIsLessThan640px] = useState(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsLessThan640px(window.innerWidth < 640);
-    }
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setIsLessThan640px(window.innerWidth < 640);
+  //   }
 
-    const handleWindowResize = () => {
-      setIsLessThan640px(window.innerWidth < 640);
-    };
+  //   const handleWindowResize = () => {
+  //     setIsLessThan640px(window.innerWidth < 640);
+  //   };
 
-    window.addEventListener("resize", handleWindowResize);
+  //   window.addEventListener("resize", handleWindowResize);
 
-    // Cleanup function to remove the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
+  //   // Cleanup function to remove the event listener
+  //   return () => window.removeEventListener("resize", handleWindowResize);
+  // }, []);
 
   return (
     <div className="w-[305px] sm:w-[620px]  md:w-[700px] lg:w-[1000px] xl:w-[1085.75px]  sm:pl-[30%] md:pl-[30%] lg:px-[10%] h-fit relative  flex justify-center ">
@@ -49,7 +49,7 @@ function BottomPartCenterComponent() {
             prevEl: ".swiper-button-prev",
           }}
           modules={[FreeMode, Autoplay, Navigation]}
-          className={`mySwiper ${isLessThan640px ? "w-[260px] mr-[33%]" : ""}`}
+          className={`BottomPartCenterComponentmySwiper`}
           breakpoints={{
             315: {
               slidesPerView: 1,

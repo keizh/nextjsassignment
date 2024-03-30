@@ -17,25 +17,25 @@ import { topInfo } from "./Info";
 // import required modules
 import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 
-export function CenterComponent() {
-  const [isLessThan640px, setIsLessThan640px] = useState(null);
-  console.log(topInfo);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsLessThan640px(window.innerWidth < 640);
-    }
+export default function CenterComponent() {
+  // const [isLessThan640px, setIsLessThan640px] = useState(null);
+  // console.log(topInfo);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setIsLessThan640px(window.innerWidth < 640);
+  //   }
 
-    const handleWindowResize = () => {
-      if (typeof window !== "undefined") {
-        setIsLessThan640px(window.innerWidth < 640);
-      }
-    };
+  //   const handleWindowResize = () => {
+  //     if (typeof window !== "undefined") {
+  //       setIsLessThan640px(window.innerWidth < 640);
+  //     }
+  //   };
 
-    window.addEventListener("resize", handleWindowResize);
+  //   window.addEventListener("resize", handleWindowResize);
 
-    // Cleanup function to remove the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
+  //   // Cleanup function to remove the event listener
+  //   return () => window.removeEventListener("resize", handleWindowResize);
+  // }, []);
 
   return (
     <>
@@ -49,7 +49,7 @@ export function CenterComponent() {
           prevEl: ".swiper-button-prev",
         }}
         modules={[FreeMode, Autoplay, Navigation]}
-        className={`mySwiper ${isLessThan640px ? "w-[260px] mr-[33%]" : ""}`}
+        className={`CenterComponentmySwiper`}
         breakpoints={{
           315: {
             slidesPerView: 1,

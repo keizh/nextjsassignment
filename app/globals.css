@@ -125,3 +125,11 @@ body {
   width: 48px;
   background-color: black;
 }
+
+@media (max-width: 640px) {
+  .CenterComponentmySwiper,
+  .BottomPartCenterComponentmySwiper {
+    width: 260px;
+    margin-right: 33%;
+  }
+}
