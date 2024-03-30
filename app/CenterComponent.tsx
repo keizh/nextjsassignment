@@ -21,7 +21,9 @@ export function CenterComponent() {
   const [isLessThan640px, setIsLessThan640px] = useState(null);
   console.log(topInfo);
   useEffect(() => {
-    setIsLessThan640px(window.innerWidth < 640);
+    if (typeof window !== "undefined") {
+      setIsLessThan640px(window.innerWidth < 640);
+    }
 
     const handleWindowResize = () => {
       setIsLessThan640px(window.innerWidth < 640);
