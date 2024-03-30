@@ -3,12 +3,11 @@ import BottomPartCenterComponent from "./BottomPartCenterComponent";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export default function BottomPart() {
-  const [windowsize, setWindowSize] = useState(window.innerWidth);
+  const [windowsize, setWindowSize] = useState(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize(window.innerWidth);
-    };
+    setWindowSize(window.innerWidth);
+    const handleResize = () => {};
 
     window.addEventListener("resize", handleResize);
 

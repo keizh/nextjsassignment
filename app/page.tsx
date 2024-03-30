@@ -4,9 +4,11 @@ import React, { useEffect, useState } from "react";
 import TopPart from "./TopPart";
 import BottomPart from "./BottomPart";
 export default function Home() {
-  const [windowsize, setWindowSize] = useState(window.innerWidth);
+  const [windowsize, setWindowSize] = useState(null);
 
   useEffect(() => {
+    setWindowSize(window.innerWidth);
+
     const handleResize = () => {
       setWindowSize(window.innerWidth);
     };

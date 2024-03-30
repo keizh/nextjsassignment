@@ -20,11 +20,10 @@ import "swiper/css/navigation";
 import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 
 function BottomPartCenterComponent() {
-  const [isLessThan640px, setIsLessThan640px] = useState(
-    window.innerWidth < 640
-  );
+  const [isLessThan640px, setIsLessThan640px] = useState(null);
 
   useEffect(() => {
+    setIsLessThan640px(window.innerWidth < 640);
     const handleWindowResize = () => {
       setIsLessThan640px(window.innerWidth < 640);
     };
