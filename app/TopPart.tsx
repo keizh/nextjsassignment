@@ -1,6 +1,11 @@
 "use client";
 
-import { CenterComponent } from "./CenterComponent";
+// import { CenterComponent } from "./CenterComponent";
+import dynamic from "next/dynamic";
+const CenterComponent = dynamic(() => import("./CenterComponent"), {
+  ssr: false,
+});
+
 import Button from "./Button";
 
 function TopPart() {

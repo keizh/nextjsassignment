@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import BottomPartCenterComponent from "./BottomPartCenterComponent";
+import dynamic from "next/dynamic";
+const BottomPartCenterComponent = dynamic(
+  () => import("./BottomPartCenterComponent"),
+  {
+    ssr: false,
+  }
+);
+
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export default function BottomPart() {
